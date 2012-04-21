@@ -3,14 +3,6 @@
 require 'rubygame'
 require './mixmaster.rb'
 
-$clips = 
-        { 
-          :amin => "./music/1_Amin.wav",
-          :cmaj => "./music/1_Cmaj.wav",
-          :fmaj => "./music/1_Fmaj.wav",
-          :gmaj => "./music/1_Gmaj.wav"
-        }
-
 class Game
     def initialize
         @screen = Rubygame::Screen.new [640,480], 0, [Rubygame::HWSURFACE, Rubygame::DOUBLEBUF]
@@ -20,15 +12,16 @@ class Game
         @clock = Rubygame::Clock.new
         @clock.target_framerate = 60
 
-        @mixmaster = Mixmaster.new $clips
+        @mixmaster = Mixmaster.new "./trax1.yml"
     end
  
     def run
+        @mixmaster.run
+
         loop do
             update
             draw
             @clock.tick
-            @mixmaster.update
         end
     end
  

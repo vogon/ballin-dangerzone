@@ -1,0 +1,10 @@
+-
+  :sym: :cmaj
+  :path: ./music/1_Cmaj.wav
+  :loop_start: 0.0
+  :loop_end: 1.0
+-
+  :sym: :fmaj
+  :path: ./music/1_Fmaj.wav
+  :loop_start: 0.0
+  :loop_end: 1.0
