@@ -1,0 +1,6 @@
+ruby='1.9.3-p0'
+gemset='ballin-dangerzone'
+rvm use $ruby
+rvm gemset list $gemset | grep -q $gemset
+if [[ $? -ne 0 ]]; then rvm gemset create $gemset; fi
+rvm use $ruby@$gemset
