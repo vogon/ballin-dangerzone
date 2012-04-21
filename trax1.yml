@@ -1,10 +1,20 @@
 -
+  :sym: :amin
+  :path: ./music/1_Amin.wav
+  :loop_start: 0.0
+  :loop_end: 0.85
+-
   :sym: :cmaj
   :path: ./music/1_Cmaj.wav
   :loop_start: 0.0
-  :loop_end: 1.0
+  :loop_end: 0.85
 -
   :sym: :fmaj
   :path: ./music/1_Fmaj.wav
   :loop_start: 0.0
-  :loop_end: 1.0
+  :loop_end: 0.85
+-
+  :sym: :gmaj
+  :path: ./music/1_Gmaj.wav
+  :loop_start: 0.0
+  :loop_end: 0.85

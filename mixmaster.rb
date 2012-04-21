@@ -40,14 +40,16 @@ class Mixmaster
     def run
         Thread.new do
             t = 1000.0
-            clip = @clips[:cmaj]
+            old_clip = @clips[:cmaj]
 
             loop do
                 t += (1.0 / 256)
 
-                if t > clip.loop_end then
-                    clip.play
+                if t > old_clip.loop_end then
+                    new_clip = @clips[@clips.keys.shuffle.pop]
+                    new_clip.play
                     t = 0
+                    old_clip = new_clip
                 end
 
                 @clock.tick
