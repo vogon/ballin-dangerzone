@@ -1,4 +1,6 @@
-ballin-dangerzone
-=================
+project ballin' dangerzone
+==========================
 
-some shit about the rhythm and the fundamental connectedness of mankind, I dunno
+an @ohwillie / @vogon joint
+
+some shit about the rhythm and the fundamental connectedness of mankind goes here, I dunno
