@@ -1,3 +1,5 @@
+# main game loop coldly stolen from http://rubygame.org/wiki/Generic_Game_Template
+
 require 'rubygame'
 
 class Game
