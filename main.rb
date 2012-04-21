@@ -1,6 +1,15 @@
 # main game loop coldly stolen from http://rubygame.org/wiki/Generic_Game_Template
 
 require 'rubygame'
+require './mixmaster.rb'
+
+$clips = 
+        { 
+          :amin => "./music/1_Amin.wav",
+          :cmaj => "./music/1_Cmaj.wav",
+          :fmaj => "./music/1_Fmaj.wav",
+          :gmaj => "./music/1_Gmaj.wav"
+        }
 
 class Game
     def initialize
@@ -10,6 +19,8 @@ class Game
         @queue = Rubygame::EventQueue.new
         @clock = Rubygame::Clock.new
         @clock.target_framerate = 60
+
+        @mixmaster = Mixmaster.new $clips
     end
  
     def run
@@ -17,6 +28,7 @@ class Game
             update
             draw
             @clock.tick
+            @mixmaster.update
         end
     end
  
@@ -36,4 +48,8 @@ class Game
 end
  
 game = Game.new
+Rubygame.open_audio( {:frequency => 44100, :channels => 2} )
+
 game.run
+
+Rubygame.close_audio
